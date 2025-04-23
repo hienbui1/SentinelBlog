@@ -13,7 +13,7 @@ const getSiteURL = () => {
     return `https://${process.env.VERCEL_BRANCH_URL}`;
   }
   // For local development
-  return 'http://localhost:4321';
+  return 'www.sentinelpower.shop';
 };
 
 // https://astro.build/config
