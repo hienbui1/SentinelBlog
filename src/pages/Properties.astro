@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// ✅ List of all your rental properties
+const properties = [
+  {
+    title: "810 West 7th Street",
+    description: "Cozy 2 bed, 1 bath home with updated kitchen, natural lighting, and off-street parking. Located near downtown and local schools.",
+    image: "https://sentinel-power-blog-resources.s3.us-east-1.amazonaws.com/Properties/IMG_6462.JPEG",
+    link: "/Properties/810-west-7th",
+  },
+];
+---
+
+<Layout title="Properties">
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold mb-8">Properties</h1>
+    <p class="text-lg text-zinc-400 mb-10">
+      Browse through current listings, explore unit details, and reach out if you're interested in availability or tours.
+    </p>
+
+    <!-- ✅ Dynamic property list -->
+    <section class="grid gap-8 md:grid-cols-2">
+      {properties.map((property) => (
+        <a href={property.link} class="block group">
+          <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+            <img
+              src={property.image}
+              alt={property.title}
+              class="w-full h-64 object-cover rounded-t-lg"
+              loading="lazy"
+            />
+          </div>
+          <h2 class="text-2xl font-bold mt-4 group-hover:text-[#1DB954] transition">
+            {property.title}
+          </h2>
+          <p class="text-zinc-400 mt-2">
+            {property.description}
+          </p>
+        </a>
+      ))}
+    </section>
+  </section>
+</Layout>

@@ -24,6 +24,11 @@ const { title, description = "A minimalist personal blog" } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lightbox2 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 min-h-screen flex flex-col">
     <!-- Page transition overlay - for smooth transitions between pages -->
@@ -258,7 +263,7 @@ const { title, description = "A minimalist personal blog" } = Astro.props;
       
       // Initialize theme handling
       document.addEventListener('DOMContentLoaded', setupThemeHandling);
-    </script>
+    </script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   </body>
 </html>
 
